@@ -10,8 +10,8 @@ const MyCanvas = () => {
       <directionalLight position={[5, 5, 10]} />
       <ambientLight intensity={0.3} />
       {/* <MyMesh position={[-2, 0, 0]} /> */}
-      {/* <MySphere position={[0, 0, 0]} /> */}
-      <MyTorus position={[0, 0, 0]} />
+      <MySphere position={[0, 0, 0]} />
+      {/* <MyTorus position={[0, 0, 0]} /> */}
     </Canvas>
   );
 };
