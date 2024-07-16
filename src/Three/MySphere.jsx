@@ -12,19 +12,21 @@ const MySphere = ({ position }) => {
     ref.current.rotation.y += d * speed;
   });
   return (
-    <mesh
-      position={position}
-      ref={ref}
-      onPointerEnter={(e) => {
-        setHovered(true);
-      }}
-      scale={isClicked ? 1.5 : 1}
-      onClick={() => setClicked(!isClicked)}
-      onPointerLeave={(e) => setHovered(false)}
-    >
-      <sphereGeometry />
-      <meshStandardMaterial wireframe color={isHovered ? "red" : "blue"} />
-    </mesh>
+    <>
+      <mesh
+        position={position}
+        ref={ref}
+        onPointerEnter={(e) => {
+          setHovered(true);
+        }}
+        scale={isClicked ? 1.5 : 1}
+        onClick={() => setClicked(!isClicked)}
+        onPointerLeave={(e) => setHovered(false)}
+      >
+        <sphereGeometry />
+        <meshStandardMaterial wireframe color={isHovered ? "red" : "blue"} />
+      </mesh>
+    </>
   );
 };
 export default MySphere;
